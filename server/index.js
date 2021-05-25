@@ -10,13 +10,10 @@ app.use(cors({optionsSuccessStatus: 200}));
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get('/api/whoami', (req, res) => {
-    async function getUserInfo() {
-        const ip = await publicIp.v4();
-        const reqLanguage = req.headers["accept-language"];
-        const reqSoftware = req.headers["user-agent"];
-        res.json({ipaddress: ip, language: reqLanguage, software: reqSoftware});
-    };
-    getUserInfo();
+    const ip = (req.headers['x-forwarded-for'] || '').split(',')[0] || req.socket.remoteAddress;
+    const reqLanguage = req.headers["accept-language"];
+    const reqSoftware = req.headers["user-agent"];
+    res.json({ipaddress: ip, language: reqLanguage, software: reqSoftware});
 });
 
 app.listen(port, () => {
