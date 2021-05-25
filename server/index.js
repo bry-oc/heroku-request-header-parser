@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const publicIp = require('public-ip');
 const app = express()
 const port = process.env.port || 3001;
 
 app.use(cors({optionsSuccessStatus: 200}));
+
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get('/api/whoami', (req, res) => {
     async function getUserInfo() {
