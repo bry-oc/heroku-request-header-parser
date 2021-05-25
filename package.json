@@ -1,0 +1,23 @@
+{
+  "name": "heroku-request-header-parser",
+  "version": "1.0.0",
+  "description": "A microservice to display request headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bry-oc/heroku-request-header-parser.git"
+  },
+  "author": "Bryan O",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bry-oc/heroku-request-header-parser/issues"
+  },
+  "homepage": "https://github.com/bry-oc/heroku-request-header-parser#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
