@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const publicIp = require('public-ip');
 const app = express()
 const port = process.env.port || 3001;
 
