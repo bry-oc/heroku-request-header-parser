@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const PORT = process.env.PORT || 3001;
 const app = express()
-const port = process.env.port || 3001;
 
 app.use(cors({optionsSuccessStatus: 200}));
 
@@ -16,5 +16,5 @@ app.get('/api/whoami', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`App listening on port ${port}!`)
+    console.log(`App listening on port ${PORT}`)
 });
