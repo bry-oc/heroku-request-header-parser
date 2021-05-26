@@ -17,7 +17,7 @@ function Display(){
 
     return(
         <div className="wrapper">
-            <a href={baseURL + "api/whoami"}>[baseurl]/api/whoami</a>
+            <a href={baseURL + "api/whoami"} target="_blank" rel="noopener noreferrer">[baseurl]/api/whoami</a>
             <br></br>
             <br></br>
             <button onClick={fetchRequest}>Click Here</button>
