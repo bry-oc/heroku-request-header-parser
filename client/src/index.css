@@ -19,6 +19,7 @@ body {
   justify-content: center;
   background: white;
   border-radius: 15px;
+  box-shadow: 2px 2px 20px;
 }
 .wrapper p {
   text-align: left;
