@@ -1,4 +1,3 @@
-import './App.css';
 import Title from './components/title.js';
 import Welcome from './components/welcome.js';
 import Explanation from './components/explanation.js';
